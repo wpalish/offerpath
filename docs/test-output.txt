@@ -1,34 +1,46 @@
 TAP version 13
-# Subtest: OfferPath: complete original workflow, calculation and rejected invalid transition
-ok 1 - OfferPath: complete original workflow, calculation and rejected invalid transition
+# Subtest: expiry preserves shared history and unrelated edits but rejects a newly expired share
+ok 1 - expiry preserves shared history and unrelated edits but rejects a newly expired share
   ---
-  duration_ms: 2.444583
+  duration_ms: 4.323708
+  type: 'test'
+  ...
+# Subtest: expired shared records survive file restart and validated restore without freezing the workspace
+ok 2 - expired shared records survive file restart and validated restore without freezing the workspace
+  ---
+  duration_ms: 5.627417
+  type: 'test'
+  ...
+# Subtest: OfferPath: complete original workflow, calculation and rejected invalid transition
+ok 3 - OfferPath: complete original workflow, calculation and rejected invalid transition
+  ---
+  duration_ms: 2.543583
   type: 'test'
   ...
 # Subtest: real file restart, optimistic conflict and validated restore into an empty database
-ok 2 - real file restart, optimistic conflict and validated restore into an empty database
+ok 4 - real file restart, optimistic conflict and validated restore into an empty database
   ---
-  duration_ms: 3.034625
+  duration_ms: 4.421791
   type: 'test'
   ...
 # Subtest: HTTP prevents anonymous reads and cross-origin/CSRF writes while authenticated workflow saves
-ok 3 - HTTP prevents anonymous reads and cross-origin/CSRF writes while authenticated workflow saves
+ok 5 - HTTP prevents anonymous reads and cross-origin/CSRF writes while authenticated workflow saves
   ---
-  duration_ms: 72.762125
+  duration_ms: 78.334083
   type: 'test'
   ...
 # Subtest: two products on one host use isolated session cookies and preserve both logins
-ok 4 - two products on one host use isolated session cookies and preserve both logins
+ok 6 - two products on one host use isolated session cookies and preserve both logins
   ---
-  duration_ms: 88.53025
+  duration_ms: 87.664917
   type: 'test'
   ...
-1..4
-# tests 4
+1..6
+# tests 6
 # suites 0
-# pass 4
+# pass 6
 # fail 0
 # cancelled 0
 # skipped 0
 # todo 0
-# duration_ms 211.098042
+# duration_ms 222.416875

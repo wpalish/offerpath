@@ -56,7 +56,7 @@ const definition = {
           r.evidence.length >= 5,
           "Запишите основание ручной отметки подтверждения.",
         );
-      if (r.status === "shared")
+      if (r.status === "shared" && old?.status !== "shared")
         required(
           r.validUntil >= new Date().toISOString().slice(0, 10),
           "Срок предложения истёк.",

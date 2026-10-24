@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-25",
+  "product": "offerpath",
+  "baseline_commit": "69d5451",
+  "before_fix": "Two date-transition regressions failed on unrelated write and empty-database restore with expired shared record.",
+  "policy": "Validate expiry on transition into shared, not on unchanged shared history or restore. UTC date boundary retained. No automatic status change or contract.",
+  "tests": {
+    "passed": 6,
+    "failed": 0,
+    "runtime": "v24.19.0",
+    "regression": "tests/expiry.test.js",
+    "log": "docs/test-output.txt"
+  },
+  "browser": {
+    "seed": "Synthetic offers created under controlled prior clock2026-10-23; mock reset before HTTP server, normal server clock used in browser.",
+    "rejection": {
+      "unrelated_draft_edit_saved": true,
+      "expired_shared_record_unchanged": true,
+      "new_expired_share_rejected": true,
+      "draft_status": "draft",
+      "draft_price": "26000",
+      "revision": 4,
+      "audit_events": 4
+    },
+    "completed": {
+      "expired_history_archived": true,
+      "original_shared_status_retained": true,
+      "original_date_and_price_retained": true,
+      "draft_price": "26000",
+      "revision": 5,
+      "audit_events": 5
+    }
+  },
+  "limits": [
+    "Synthetic local checks only; no new public server hosting",
+    "UI layout/schema unchanged; no fresh whole-interface or security audit",
+    "No calendar/bank/e-signature integration or customer acceptance"
+  ]
+}
