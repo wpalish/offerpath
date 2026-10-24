@@ -1,0 +1,48 @@
+[
+  {
+    "collection": "offers",
+    "as": "o",
+    "data": {
+      "number": "TEST-CP",
+      "client": "Пример",
+      "scope": "Учебный образец",
+      "terms": "Без оплаты и реальных обязательств",
+      "currency": "KZT",
+      "price": "25000",
+      "validUntil": "2099-12-31",
+      "status": "draft",
+      "evidence": ""
+    }
+  },
+  {
+    "collection": "offers",
+    "id": "$o",
+    "error": "основание",
+    "data": {
+      "number": "TEST-CP",
+      "client": "Пример",
+      "scope": "Учебный образец",
+      "terms": "Без оплаты и реальных обязательств",
+      "currency": "KZT",
+      "price": "25000",
+      "validUntil": "2099-12-31",
+      "status": "accepted",
+      "evidence": ""
+    }
+  },
+  {
+    "collection": "offers",
+    "id": "$o",
+    "data": {
+      "number": "TEST-CP",
+      "client": "Пример",
+      "scope": "Учебный образец",
+      "terms": "Без оплаты и реальных обязательств",
+      "currency": "KZT",
+      "price": "25000",
+      "validUntil": "2099-12-31",
+      "status": "shared",
+      "evidence": ""
+    }
+  }
+]
